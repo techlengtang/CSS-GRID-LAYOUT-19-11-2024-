@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Web page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2> <i class="fa-solid fa-user"></i> lxngtang </h2>
+            <ul>
+                <li> <i class="fa-solid fa-house"></i> Dashboard</li>
+                <li> <i class="fa-solid fa-book"></i> Courses</li>
+                <li> <i class="fa-solid fa-gift"></i> Resources</li>
+                <li> <i class="fa-solid fa-calendar-days"></i>Learning plan</li>
+                <li><i class="fa-solid fa-message"></i>Chats</li>
+                <li><i class="fa-solid fa-gear"></i>Settings</li>
+            </ul>
+        <div class="card">
+            <div class="upgrade-card">
+                <p> Upgrade to <strong> PRO </strong> for more resources !</p>
+                <button class="upgrade-button">Upgrade</button>
+            </div>
+        </div>
+            
+        </div>
+        
+        <div class="main-content">
+            <div class="Header">
+                <div class="content-header">
+                    <h1>Dashboard</h1>
+                </div>
+                
+                    <div class="mini-botton">
+                        <i class="fa-solid fa-search"></i>
+                    </div>
+                
+                
+            </div>
+            <header>
+                <h3> Welcome back lxngtang !</h3>
+                <p>You've learned 80% of your goal this week ! <br> Keep it up and improve your result!</p>
+            </header>
+            <div class="containerchart">
+                <div class="chart">
+                    <canvas id="barChart" width="400" height="400"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="pieChart" width="400" height="400"></canvas>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const ctx = document.getElementById('barChart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday'],
+    datasets: [{
+      label: 'Time spent on learning', 
+      data: [11, 12, 10, 7, 3, 1, 0.5],
+      backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',  // Red
+          'rgba(54, 162, 235, 0.2)',  // Blue
+          'rgba(255, 206, 86, 0.2)',  // Yellow
+          'rgba(75, 192, 192, 0.2)',  // Green
+          'rgba(153, 102, 255, 0.2)', // Purple
+          'rgba(255, 159, 64, 0.2)' ,  // Orange
+          'rgba(255, 99, 132, 0.2)', 
+      ],
+      borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+      ],
+      
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+            </script>
+            <script>
+                const ctx2 = document.getElementById('pieChart');
+
+new Chart(ctx2, {
+  type: 'pie',
+  data: {
+    labels: ['Unit1', 'Unit2', 'Unit3', 'Unit4', 'Unit5', 'Unit6'],
+    datasets: [{
+      label: 'Lesson',
+      data: [30, 20, 20, 10,5 , 5],
+      backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',  // Red 
+          'rgba(54, 162, 235, 0.2)',  // Blue
+          'rgba(255, 206, 86, 0.2)',  // Yellow
+          'rgba(75, 192, 192, 0.2)',  // Green
+          'rgba(153, 102, 255, 0.2)', // Purple
+          'rgba(255, 159, 64, 0.2)'   // Orange
+      ],
+      borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+    </script>
+</div>
+        <div class="profile-container">
+            <header>
+                <h4>Profile</h4>  
+                <img src="profileprofile.jpg" alt="profile">
+                <h4>Tang Techleng</h4>
+                <p>Student - Y2</p>
+            </header>
+            <div class="bottom-profile">
+                <p style="color: rgb(0, 0, 0);"><strong>Reminder</strong></p>
+            <span class="mini-botton">
+            <i class="fa-regular fa-bell"></i>
+            </span>
+            </div>
+            <div class="btm-items">
+                <div class="item">
+                    <span class="iconn"> 
+                        <i class="fa-solid fa-ban" style="color: #fffcfc;"></i>
+                    </span>
+                    <span class="text">
+                        <h5>Week 1 - Assignment</h5>
+                        <p>01 Jan 2025 11:59 pm</p>
+                    </span>
+                </div>
+                <div class="item">
+                    <span class="iconn" style="background-color: rgb(161, 159, 159);">
+                        <i class="fa-regular fa-envelope"></i>                </span>
+                    <span class="text">
+                        <h5>Week 2 - Final Project</h5>
+                        <p>01 Jan 2026 11:59 pm</p>
+                    </span>
+                </div>
+                <div class="item">
+                    <span class="iconn">
+                        <i class="fa-solid fa-ban" style="color: #ffffff;"></i>
+                    </span>
+                    <span class="text">
+                        <h5>Week 3 - Assignment</h5>
+                        <p>01 Jan 2027 11:59 pm</p>
+                    </span>
+                </div>
+            </div>
+            <div class="logout-container">
+                <p style="color: rgb(0, 0, 0);"><strong>Log out</strong></p>
+            <span class="mini-botton">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
